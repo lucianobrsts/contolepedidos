@@ -17,7 +17,7 @@ class App extends Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Teste React/Redux
+            Teste React/Redux + BootStrap
           </a>
         </header>
       </div>
