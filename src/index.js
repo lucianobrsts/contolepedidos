@@ -7,7 +7,7 @@ import {Router, Route, IndexRoute, hashHistory} from 'react-router';
 
 ReactDOM.render(
     <Router history={hashHistory}>
-    
+        <Route path='/' component={App} />
     </Router>
     , document.getElementById('root'));
 serviceWorker.unregister();
