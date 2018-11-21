@@ -7,7 +7,7 @@ export default class Home extends Component {
         img: 'cadastro3',
         title: 'Cadastro',
         text: 'Cadastrar pedidos.',
-        alt: 'Cadastro de pedidos.',
+        alt: 'Cadastro',
         action: () => hashHistory.push('/cadastro')
     }
 
@@ -15,7 +15,7 @@ export default class Home extends Component {
         img: 'status',
         title: 'Status',
         text: 'Verificar status.',
-        alt: 'Status do pedido.',
+        alt: 'Status',
         action: () => hashHistory.push('/status')
     }
 
@@ -23,7 +23,7 @@ export default class Home extends Component {
         img: 'controlePedido',
         title: 'Pedidos',
         text: 'Acompanhar pedidos.',
-        alt: 'Pedidos.',
+        alt: 'Pedido',
         action: () => hashHistory.push('/pedido')
     }
 
@@ -31,14 +31,14 @@ export default class Home extends Component {
         img: 'caixa',
         title: 'Caixa',
         text: 'Fazer pagamentos.',
-        alt: 'Pagamentos',
+        alt: 'Pagamento',
         action: () => hashHistory.push('/caixa')
     }
 
     render() {
         return (
             <div className="container text-center">
-                <div className="row">
+                <div className="row mt-5 justify-content-between">
                     <HomeCard {...this.homeCardCadastro}/>
                     <HomeCard {...this.homeCardStatus}/>
                     <HomeCard {...this.homeCardAcompanhamentoPedidos}/>

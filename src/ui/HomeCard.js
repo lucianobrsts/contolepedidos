@@ -8,7 +8,7 @@ const HomeCard = (props) => (
     <div className="col- col-" style={{ paddingTop: '10px' }}>
         <div className="card" style={{ width: '14rem', marginRight: '50px' }}>
             <img className="card-img-top rounded mx-auto d-block" style={{ paddingTop: '10px', width: '60px' }}
-                src={props.img} alt={props.alt} />
+                src={status} alt={props.alt} />
             <div className="card-body">
                 <p className="card-text">{props.text}</p>
                 <button className="btn btn-primary" onClick={props.action}>{props.title}</button>
