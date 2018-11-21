@@ -1,29 +1,38 @@
 import React, { Component } from 'react';
 import HomeCard from '../ui/HomeCard';
+import {hashHistory} from 'react-router';
 
 export default class Home extends Component {
     homeCardCadastro = {
+        img: 'cadastro3',
         title: 'Cadastro',
-        text: 'Cadastre pedidos de clientes clicando no batão baixo.',
-        action: () => alert('Cadastro clicado')
+        text: 'Cadastrar pedidos.',
+        alt: 'Cadastro de pedidos.',
+        action: () => hashHistory.push('/cadastro')
     }
 
     homeCardStatus = {
+        img: 'status',
         title: 'Status',
-        text: 'Verifique o status dos pedidos clicando no botão abaixo.',
-        action: () => alert('Status clicado')
+        text: 'Verificar status.',
+        alt: 'Status do pedido.',
+        action: () => hashHistory.push('/status')
     }
 
     homeCardAcompanhamentoPedidos = {
+        img: 'controlePedido',
         title: 'Pedidos',
-        text: 'Acompanhe os pedidos em espera clicando no batão baixo.',
-        action: () => alert('Acompanhamento clicado')
+        text: 'Acompanhar pedidos.',
+        alt: 'Pedidos.',
+        action: () => hashHistory.push('/pedido')
     }
 
     homeCardCaixa = {
+        img: 'caixa',
         title: 'Caixa',
-        text: 'Faça Pagamentos de pedidos clicando no batão baixo.',
-        action: () => alert('Caixa clicado')
+        text: 'Fazer pagamentos.',
+        alt: 'Pagamentos',
+        action: () => hashHistory.push('/caixa')
     }
 
     render() {
