@@ -4,7 +4,7 @@ import {hashHistory} from 'react-router';
 
 export default class Home extends Component {
     homeCardCadastro = {
-        img: 'cadastro3',
+        img: 'cadastro',
         title: 'Cadastro',
         text: 'Cadastrar pedidos.',
         alt: 'Cadastro',
