@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
+import vermelho from '../img/bolaVermelha.png';
+import amarelo from '../img/bolaAmarela.png';
+import verde from '../img/bolaVerde.png';
+import azul from '../img/bolaAzul.png';
+import seta from '../img/setas.png';
 
 export default class Caixa extends Component {
     render() {
         return (
-            <form>
+            <div>
                 <br />
                 <h2>Caixa</h2>
                 <br />
@@ -20,21 +25,19 @@ export default class Caixa extends Component {
                         <tr>
                             <th scope="row">1</th>
                             <td style={{ textAlign: 'center' }}>Cor pedido</td>
-                            <td style={{ textAlign: 'center' }}><button className="btn btn-primary" /></td>
+                            <td style={{ textAlign: 'center' }}><img src={seta} style={{ width: '30px' }} /></td>
                         </tr>
                     </tbody>
                 </table>
 
-                <ul class="list-unstyled">
-                    <li>Legenda</li>
-                    <ul>
-                        <li>Pedido novo</li>
-                        <li>Pedido sendo preparado</li>
-                        <li>Pedido em conferência</li>
-                        <li>Pronto para paragamento</li>
-                    </ul>
-                </ul>
-            </form >
-        )
+                <p> ATENÇÃO: Dirija-se ao caixa quando seu pedido estiver azul. </p>
+
+                <p>Legenda</p>
+                <img src={vermelho} style={{ width: '30px' }} /> <span>Pedido Novo</span> <br />
+                <img src={amarelo} style={{ width: '30px' }} /> <span>Pedido sendo preparado</span> <br />
+                <img src={verde} style={{ width: '30px' }} /> <span>Pedido em conferência</span> <br />
+                <img src={azul} style={{ width: '30px' }} /> <span>Pronto para pagamento</span> <br />
+            </div >
+        );
     }
 }
