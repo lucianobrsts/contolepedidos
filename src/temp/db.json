@@ -1,0 +1,36 @@
+{
+    "pedidos": [
+      {
+        "nome": "Luciano BRito",
+        "descricao": "parachoque dianteiro Gol",
+        "cpf": "585.924.090-20",
+        "status" : "Novo",
+        "dataHora" : "2",
+        "id": 1
+      },
+      {
+        "nome": "Jackson Batista",
+        "descricao": "Lanterna parati 2010",
+        "cpf": "383.059.290-60",
+        "status" : "Pedido em conferência",
+        "dataHora" : "30",
+        "id": 2
+      },
+      {
+        "nome": "Sérgio Botelho",
+        "descricao": "Stop de freio Onix 2012",
+        "cpf": "540.361.640-31",
+        "status" : "Pedido sendo preparado",
+        "dataHora" : "35",
+        "id": 3
+      },
+      {
+        "nome": "Roberto Carlos",
+        "descricao": "Acendedor de cigarro",
+        "cpf": "231.295.550-48",
+        "status" : "Pronto para pagamento",
+        "dataHora" : "15",
+        "id": 4
+      }
+    ]
+  }
