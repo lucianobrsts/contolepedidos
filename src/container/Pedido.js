@@ -56,7 +56,7 @@ export default class Pedido extends Component {
                         {dbjson.pedidos.map((pedido, index) => {
                             return (
                                 < tr key={pedido.id}>
-                                    <th scope="row">{pedido.nome}</th>
+                                    <th scope="row" style={{fontSize: '20px' }}>{pedido.nome}</th>
                                     <td style={{ textAlign: 'center' }}> <strong>{pedido.dataHora}</strong> min </td>
                                     <td style={{ textAlign: 'center' }}>{this._corStatus(pedido)} </td>
                                 </tr>

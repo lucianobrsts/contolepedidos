@@ -2,11 +2,29 @@ import React, { Component } from 'react';
 import Legenda from '../ui/Legenda'
 import excluirPedido from '../img/excluir.png';
 import axios from 'axios';
-import dbjson from '../temp/db.json'
+import dbjson from '../temp/db.json';
+import bolaVermelha from '../img/bolaVermelha.png';
+import bolaAmarela from '../img/bolaAmarela.png';
+import bolaVerde from '../img/bolaVerde.png';
+import bolaAzul from '../img/bolaAzul.png';
 
 const API_URL = 'http://localhost:3000/pedidos';
 
 export default class Caixa extends Component {
+    _corStatus(pedido) {
+        let cor = ''
+        if (pedido.status === 'Novo') {
+            cor = <img src={bolaVermelha} />;
+        } else if (pedido.status === 'Pedido sendo preparado') {
+            cor = <img src={bolaAmarela} />;
+        } else if (pedido.status === 'Pedido em conferência') {
+            cor = <img src={bolaVerde} />;
+        } else if (pedido.status === 'Pronto para pagamento') {
+            cor = <img src={bolaAzul} />;
+        }
+        return cor;
+    }
+
     render() {
         return (
             <div>
@@ -26,8 +44,8 @@ export default class Caixa extends Component {
                         {dbjson.pedidos.map((pedido, index) => {
                             return (
                                 < tr key={pedido.id}>
-                                    <th scope="row">{pedido.nome}</th>
-                                    <td style={{ textAlign: 'center' }}>{pedido.status}</td>
+                                    <th scope="row" style={{fontSize: '20px' }}>{pedido.nome}</th>
+                                    <td style={{ textAlign: 'center' }}>{this._corStatus(pedido)}</td>
                                     <td style={{ textAlign: 'center' }}><img src={excluirPedido} style={{ width: '30px' }} /></td>
                                 </tr>
                             )

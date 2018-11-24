@@ -54,7 +54,7 @@ export default class Status extends Component {
                         {dbjson.pedidos.map((pedido, index) => {
                             return (
                                 < tr key={pedido.id}>
-                                    <th scope="row">{pedido.nome}</th>
+                                    <th scope="row" style={{fontSize: '20px' }}>{pedido.nome}</th>
                                     <td style={{ textAlign: 'center' }}>{this._corStatus(pedido)}</td>
                                     <td style={{ textAlign: 'center' }}><img src={carregarPedido} style={{ width: '35px', paddingLeft: '5px' }} />
                                         <img src={avancarStatus} style={{ width: '35px', paddingLeft: '5px' }} />
