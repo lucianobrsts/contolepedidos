@@ -20,12 +20,12 @@ export default class Pedido extends Component {
                         </tr>
                     </thead>
                     <tbody>
-                    {dbjson.pedidos.map((pedido, index) => {
+                        {dbjson.pedidos.map((pedido, index) => {
                             return (
                                 < tr key={pedido.id}>
                                     <th scope="row">{pedido.nome}</th>
-                                    <td style={{ textAlign: 'center' }}>{pedido.status}</td>
-                                    <td style={{ textAlign: 'center' }}><img src={seta} style={{ width: '30px' }} /></td>
+                                    <td style={{ textAlign: 'center' }}> <strong>{pedido.dataHora}</strong> min </td>
+                                    <td style={{ textAlign: 'center' }}>{pedido.status} </td>
                                 </tr>
                             )
                         })}

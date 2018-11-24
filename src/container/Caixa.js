@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Legenda from '../ui/Legenda'
-import seta from '../img/setas.png';
+import excluirPedido from '../img/excluir.png';
 import axios from 'axios';
 import dbjson from '../temp/db.json'
 
@@ -28,7 +28,7 @@ export default class Caixa extends Component {
                                 < tr key={pedido.id}>
                                     <th scope="row">{pedido.nome}</th>
                                     <td style={{ textAlign: 'center' }}>{pedido.status}</td>
-                                    <td style={{ textAlign: 'center' }}><img src={seta} style={{ width: '30px' }} /></td>
+                                    <td style={{ textAlign: 'center' }}><img src={excluirPedido} style={{ width: '30px' }} /></td>
                                 </tr>
                             )
                         })}

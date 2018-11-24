@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import Legenda from '../ui/Legenda';
-import seta from '../img/setas.png';
 import axios from 'axios';
 import dbjson from '../temp/db.json';
+import carregarPedido from '../img/carregarPedido.png';
+import avancarStatus from '../img/avancarStatus.png';
+import excluirPedido from '../img/excluir.png';
 
 const API_URL = 'http://localhost:3004/status/'
 
@@ -11,7 +13,7 @@ export default class Status extends Component {
         super();
         this.state = {
             pedidos: [{
-            
+
             }]
         }
     }
@@ -31,12 +33,14 @@ export default class Status extends Component {
                         </tr>
                     </thead>
                     <tbody>
-                    {dbjson.pedidos.map((pedido, index) => {
+                        {dbjson.pedidos.map((pedido, index) => {
                             return (
                                 < tr key={pedido.id}>
                                     <th scope="row">{pedido.nome}</th>
                                     <td style={{ textAlign: 'center' }}>{pedido.status}</td>
-                                    <td style={{ textAlign: 'center' }}><img src={seta} style={{ width: '30px' }} /></td>
+                                    <td style={{ textAlign: 'center' }}><img src={carregarPedido} style={{ width: '35px', paddingLeft: '5px' }} />
+                                        <img src={avancarStatus} style={{ width: '35px', paddingLeft: '5px' }} />
+                                        <img src={excluirPedido} style={{ width: '35px', paddingLeft: '5px' }} /></td>
                                 </tr>
                             )
                         })}
