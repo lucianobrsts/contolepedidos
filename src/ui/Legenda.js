@@ -11,10 +11,10 @@ export default class Legenda extends Component {
                 <hr />
                 <p> ATENÇÃO: Dirija-se ao caixa quando seu pedido estiver azul. </p>
                 <p>Legenda</p>
-                <img src={vermelho} style={{ width: '30px' }} /> <span>Pedido Novo</span> <br />
-                <img src={amarelo} style={{ width: '30px' }} /> <span>Pedido sendo preparado</span> <br />
-                <img src={verde} style={{ width: '30px' }} /> <span>Pedido em conferência</span> <br />
-                <img src={azul} style={{ width: '30px' }} /> <span>Pronto para pagamento</span> <br />
+                <img src={vermelho} /> <span>Pedido Novo</span> <br />
+                <img src={amarelo} /> <span>Pedido sendo preparado</span> <br />
+                <img src={verde} /> <span>Pedido em conferência</span> <br />
+                <img src={azul} /> <span>Pronto para pagamento</span> <br />
             </div>
         );
     }
