@@ -8,13 +8,13 @@ export default class Cadastro extends Component {
                 <h2>Cadastro de Pedidos</h2>
                 <br />
 
-                <div className="form-group">
+                <div className="form-group col-md-6">
                     <input type="nome" className="form-control" id="nomeCliente" aria-describedby="nomeHelp" placeholder="Nome do Cliente" />
                 </div>
-                <div className="form-group">
+                <div className="form-group col-md-6">
                     <input type="cpf" className="form-control" id="cpf" placeholder="CPF" />
                 </div>
-                <div class="form-group">
+                <div class="form-group col-md-6">
                     <textarea class="form-control" id="descricaoPedido" rows="5" placeholder="Descrição do Pedido"></textarea>
                 </div>
                 <button type="submit" className="btn btn-primary">Registrar Pedido</button>

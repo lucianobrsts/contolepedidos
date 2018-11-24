@@ -8,6 +8,7 @@ export default class Legenda extends Component {
     render() {
         return (
             <div>
+                <hr />
                 <p> ATENÇÃO: Dirija-se ao caixa quando seu pedido estiver azul. </p>
                 <p>Legenda</p>
                 <img src={vermelho} style={{ width: '30px' }} /> <span>Pedido Novo</span> <br />
