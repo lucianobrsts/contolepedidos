@@ -1,7 +1,7 @@
 {
     "pedidos": [
       {
-        "nome": "Luciano BRito",
+        "nome": "Luciano Brito",
         "descricao": "parachoque dianteiro Gol",
         "cpf": "585.924.090-20",
         "status" : "Novo",

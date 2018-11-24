@@ -1,7 +1,52 @@
 import React, { Component } from 'react';
+import axios from 'axios';
+
+const API_URL = 'http://localhost:3000/pedido';
+
+const INITIAL_STATE = {
+    nome: "",
+    cpf: "",
+    descricao: "",
+    status: "NOVO",
+    hora: new Date(),
+    id: 0
+}
 
 export default class Cadastro extends Component {
+    constructor(props) {
+        super(props)
+        this.state = INITIAL_STATE
+        this._handleChange = this._handleChange.bind(this)
+        this._handleSubmit = this._handleSubmit.bind(this)
+    }
+
+    _handleChange = event => {
+        event.preventDefault()
+        console.log([event.target.name])
+        this.setState({
+            [event.target.name]: event.target.value
+        })
+    }
+
+    _handleSubmit = event => {
+        event.preventDefault()
+        const pedido = { ...this.state }
+        this._adicionarPedido(pedido)
+        this.setState({ ...this.state, ...INITIAL_STATE })
+    }
+
+    _adicionarPedido(pedido) {
+        axios.post(API_URL, pedido)
+            .then(response => {
+                console.log(response.data);
+            })
+            .catch(error => {
+                console.log(error);
+            });
+    }
+
     render() {
+        const { nome, cpf, descricao } = this.state
         return (
             <form>
                 <br />
@@ -9,13 +54,13 @@ export default class Cadastro extends Component {
                 <br />
 
                 <div className="form-group col-md-6">
-                    <input type="nome" className="form-control" id="nomeCliente" aria-describedby="nomeHelp" placeholder="Nome do Cliente" />
+                    <input type="text" className="form-control" name="nome" value={nome} placeholder="Nome do Cliente" onChange={this._handleChange} />
                 </div>
                 <div className="form-group col-md-6">
-                    <input type="cpf" className="form-control" id="cpf" placeholder="CPF" />
+                    <input type="text" className="form-control" name="cpf" value={cpf} placeholder="CPF" onChange={this._handleChange} />
                 </div>
-                <div class="form-group col-md-6">
-                    <textarea class="form-control" id="descricaoPedido" rows="5" placeholder="Descrição do Pedido"></textarea>
+                <div className="form-group col-md-6">
+                    <textarea className="form-control" name="descricao" value={descricao} rows="5" placeholder="Descrição do Pedido" onChange={this._handleChange}></textarea>
                 </div>
                 <button type="submit" className="btn btn-primary">Registrar Pedido</button>
             </form>

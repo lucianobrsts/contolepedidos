@@ -1,8 +1,5 @@
 import React from 'react';
-import cadastro from '../img/cadastro.png';
 import status from '../img/status.png';
-import controlePedido from '../img/controlePedido.png';
-import caixa from '../img/caixa.png';
 
 const HomeCard = (props) => (
     <div className="col- col-" style={{ paddingTop: '10px' }}>
