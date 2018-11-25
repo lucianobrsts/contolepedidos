@@ -48,23 +48,24 @@ export default class Cadastro extends Component {
     render() {
         const { nome, cpf, descricao } = this.state
         return (
-            <form>
+            <div>
                 <br />
                 <h2>Cadastro de Pedidos</h2>
                 <br />
 
-                <div className="form-group col-md-6">
-                    <input type="text" className="form-control" name="nome" value={nome} placeholder="Nome do Cliente" onChange={this._handleChange} />
-                </div>
-                <div className="form-group col-md-6">
-                    <input type="text" className="form-control" name="cpf" value={cpf} placeholder="CPF" onChange={this._handleChange} />
-                </div>
-                <div className="form-group col-md-6">
-                    <textarea className="form-control" name="descricao" value={descricao} rows="5" placeholder="Descrição do Pedido" onChange={this._handleChange}></textarea>
-                </div>
-                <button type="submit" className="btn btn-primary">Registrar Pedido</button>
-            </form>
-
+                <form onSubmit={this._handleSubmit}>
+                    <div className="form-group col-md-6">
+                        <input type="text" className="form-control" name="nome" value={nome} placeholder="Nome do Cliente" onChange={this._handleChange} />
+                    </div>
+                    <div className="form-group col-md-6">
+                        <input type="text" className="form-control" name="cpf" value={cpf} placeholder="CPF" onChange={this._handleChange} />
+                    </div>
+                    <div className="form-group col-md-6">
+                        <textarea className="form-control" name="descricao" value={descricao} rows="5" placeholder="Descrição do Pedido" onChange={this._handleChange}></textarea>
+                    </div>
+                    <button type="submit" className="btn btn-primary">Registrar Pedido</button>
+                </form>
+            </div>
         )
     }
 }
