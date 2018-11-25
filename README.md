@@ -17,6 +17,8 @@
 - JavaScript
 - React
 - Redux
+- Axios
+- Json-Server
 - ES6
 - Bootstrap
 - Git
