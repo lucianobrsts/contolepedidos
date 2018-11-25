@@ -37,14 +37,14 @@ export default class Pedido extends Component {
     }
 
     render() {
-        const { pedido } = this.props
+        
         return (
             <div>
                 <br />
                 <h2>Acompanhamento de Pedidos</h2>
                 <br />
 
-                <table class="table table-bordeless table-hover">
+                <table className="table table-bordeless table-hover">
                     <thead>
                         <tr>
                             <th scope="col" style={{ width: '60%' }}>Cliente</th>

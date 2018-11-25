@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Legenda from '../ui/Legenda';
-import axios from 'axios';
 import dbjson from '../temp/db.json';
 import carregarPedido from '../img/carregarPedido.png';
 import avancarStatus from '../img/avancarStatus.png';
@@ -9,8 +8,6 @@ import bolaVermelha from '../img/bolaVermelha.png';
 import bolaAmarela from '../img/bolaAmarela.png';
 import bolaVerde from '../img/bolaVerde.png';
 import bolaAzul from '../img/bolaAzul.png';
-
-const API_URL = 'http://localhost:3004/status/'
 
 export default class Status extends Component {
     constructor() {
@@ -42,7 +39,7 @@ export default class Status extends Component {
                 <h2>Avançar Status do Pedido</h2>
                 <br />
 
-                <table class="table table-bordeless table-hover">
+                <table className="table table-bordeless table-hover">
                     <thead>
                         <tr>
                             <th scope="col" style={{ width: '60%' }}>Cliente</th>

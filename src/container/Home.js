@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import HomeCard from '../ui/HomeCard';
-import {hashHistory} from 'react-router';
+import { hashHistory } from 'react-router';
 
 export default class Home extends Component {
     homeCardCadastro = {
-        img: 'cadastro',
         title: 'Cadastro',
         text: 'Cadastrar pedidos.',
         alt: 'Cadastro',
@@ -12,7 +11,6 @@ export default class Home extends Component {
     }
 
     homeCardStatus = {
-        img: 'status',
         title: 'Status',
         text: 'Verificar status.',
         alt: 'Status',
@@ -20,7 +18,6 @@ export default class Home extends Component {
     }
 
     homeCardAcompanhamentoPedidos = {
-        img: 'controlePedido',
         title: 'Pedidos',
         text: 'Acompanhar pedidos.',
         alt: 'Pedido',
@@ -28,7 +25,6 @@ export default class Home extends Component {
     }
 
     homeCardCaixa = {
-        img: 'caixa',
         title: 'Caixa',
         text: 'Fazer pagamentos.',
         alt: 'Pagamento',
@@ -39,10 +35,10 @@ export default class Home extends Component {
         return (
             <div className="container text-center">
                 <div className="row mt-5 justify-content-between">
-                    <HomeCard {...this.homeCardCadastro}/>
-                    <HomeCard {...this.homeCardStatus}/>
-                    <HomeCard {...this.homeCardAcompanhamentoPedidos}/>
-                    <HomeCard {...this.homeCardCaixa}/>
+                    <HomeCard {...this.homeCardCadastro} />
+                    <HomeCard {...this.homeCardStatus} />
+                    <HomeCard {...this.homeCardAcompanhamentoPedidos} />
+                    <HomeCard {...this.homeCardCaixa} />
                 </div>
             </div>
         )
