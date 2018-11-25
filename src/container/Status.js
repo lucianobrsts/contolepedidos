@@ -54,9 +54,11 @@ export default class Status extends Component {
                                 < tr key={pedido.id}>
                                     <th scope="row" style={{ fontSize: '20px' }}>{pedido.nome}</th>
                                     <td style={{ textAlign: 'center' }}>{this._corStatus(pedido)}</td>
-                                    <td style={{ textAlign: 'center' }}><img src={carregarPedido} style={{ paddingLeft: '5px' }} alt="Carregar Pedido" data-target="#exampleModal" data-toggle="modal"/>
-                                        <img src={avancarStatus} style={{ paddingLeft: '5px' }} alt="Avançar Status" />
-                                        <img src={excluirPedido} style={{ paddingLeft: '5px' }} alt="Excluir Pedido" /></td>
+                                    <td style={{ textAlign: 'center' }}>
+                                        <input style={{ paddingRight: '10px' }} name="carregarPedido" type="image" id="carregarPedido" src={carregarPedido} alt="Carregar Pedido" data-target="#exampleModal" data-toggle="modal"></input>
+                                        <input style={{ paddingRight: '10px' }} name="avançarStatus" type="image" id="avançarStatus" src={avancarStatus} alt="Avançar Status"></input>
+                                        <input style={{ paddingRight: '10px' }} name="excluirPedido" type="image" id="excluirPedido" src={excluirPedido} alt="Excluir Pedido"></input>
+                                    </td>
                                 </tr>
                             )
                         })}
@@ -64,7 +66,6 @@ export default class Status extends Component {
                 </table>
                 <ModalPedido />
                 <Legenda />
-
             </div >
         );
     }
