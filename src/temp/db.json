@@ -5,7 +5,7 @@
         "descricao": "parachoque dianteiro Gol",
         "cpf": "585.924.090-20",
         "status" : "Novo",
-        "dataHora" : "2",
+        "minutos" : "2",
         "id": 1
       },
       {
@@ -13,7 +13,7 @@
         "descricao": "Lanterna parati 2010",
         "cpf": "383.059.290-60",
         "status" : "Novo",
-        "dataHora" : "30",
+        "minutos" : "30",
         "id": 2
       },
       {
@@ -21,24 +21,8 @@
         "descricao": "Stop de freio Onix 2012",
         "cpf": "540.361.640-31",
         "status" : "Pedido sendo preparado",
-        "dataHora" : "35",
+        "minutos" : "35",
         "id": 3
-      },
-      {
-        "nome": "Roberto Carlos",
-        "descricao": "Acendedor de cigarro",
-        "cpf": "231.295.550-48",
-        "status" : "Pronto para pagamento",
-        "dataHora" : "15",
-        "id": 4
-      },
-      {
-        "nome": "Artur Francisco",
-        "descricao": "Acendedor de cigarro",
-        "cpf": "231.295.550-48",
-        "status" : "Pronto para pagamento",
-        "dataHora" : "12",
-        "id": 5
       }
     ]
   }
