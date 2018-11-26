@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-
-const API_URL = 'http://localhost:3000/pedido';
 
 const INITIAL_STATE = {
     nome: "",
@@ -33,16 +30,6 @@ export default class Cadastro extends Component {
         const pedido = { ...this.state }
         this._adicionarPedido(pedido)
         this.setState({ ...this.state, ...INITIAL_STATE })
-    }
-
-    _adicionarPedido(pedido) {
-        axios.post(API_URL, pedido)
-            .then(response => {
-                console.log(response.data);
-            })
-            .catch(error => {
-                console.log(error);
-            });
     }
 
     render() {

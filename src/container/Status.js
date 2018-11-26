@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Legenda from '../ui/Legenda';
 import ModalPedido from '../ui/ModalPedido';
-import dbjson from '../temp/db.json';
 import carregarPedido from '../img/carregarPedido.png';
 import avancarStatus from '../img/avancarStatus.png';
 import excluirPedido from '../img/excluir.png';
@@ -9,9 +8,6 @@ import bolaVermelha from '../img/bolaVermelha.png';
 import bolaAmarela from '../img/bolaAmarela.png';
 import bolaVerde from '../img/bolaVerde.png';
 import bolaAzul from '../img/bolaAzul.png';
-import axios from 'axios';
-
-const API_URL = 'http://localhost:3000/pedidos';
 
 export default class Status extends Component {
     constructor(props) {
@@ -88,7 +84,7 @@ export default class Status extends Component {
         return cor;
     }
     render() {
-        const { pedidos, carregando } = this.state
+        const { pedidos} = this.state
         return (
             <div>
                 <br />
