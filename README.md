@@ -20,6 +20,7 @@
 - Axios
 - Json-Server
 - ES6
+- JSX
 - Bootstrap
 - Git
 - GitHub
