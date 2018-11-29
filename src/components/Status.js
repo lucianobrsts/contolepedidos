@@ -26,7 +26,6 @@ class Status extends Component {
     }
 
     atualizarPedido(pedido) {
-        console.log(pedido.status);
         var status = pedido.status;
         if (pedido.status === 'Novo') {
             status = 'Pedido sendo preparo';
@@ -39,21 +38,13 @@ class Status extends Component {
         }
     }
 
-    /*
-    handleClick = (event) => {
-        event.preventDefault()
-        this.setState({
-            exibirPedido: !this.state.exibirPedido
-        })
-    }*/
-
-    handleChange= event => {
+    handleChange = event => {
         this.setState({ pedido: event.target.value });
     }
 
     excluirPedido = (id) => {
         console.log(id);
-      }
+    }
 
     corStatus(pedido) {
         let cor = ''
@@ -77,9 +68,9 @@ class Status extends Component {
                         <th scope="row">{pedido.nome}</th>
                         <td style={{ textAlign: 'center' }}>{this.corStatus(pedido)}</td>
                         <td style={{ textAlign: 'center' }}>
-                            <input style={{ paddingRight: '10px' }} name="carregarPedido" type="image" id="carregarPedido" src={carregarPedido} alt="Carregar Pedido" data-target="#exampleModal" data-toggle="modal"></input>
-                            <input style={{ paddingRight: '10px' }} name="avançarStatus" type="image" id="avançarStatus" src={avancarStatus} alt="Avançar Status" onClick={(e) => this.atualizarPedido.bind(pedido, e)}></input>
-                            <input style={{ paddingRight: '10px' }} name="excluirPedido" type="image" id="excluirPedido" src={excluirPedido} alt="Excluir Pedido" onClick={() => {excluirPedido(pedido.id)}}></input>
+                            <input style={{ paddingRight: '10px' }} name="carregarPedido" type="image" id="carregarPedido" src={carregarPedido} alt="Carregar Pedido" title="Carregar Pedido" data-toggle="modal" data-target="#exampleModal"></input>
+                            <input style={{ paddingRight: '10px' }} name="avançarStatus" type="image" id="avançarStatus" src={avancarStatus} alt="Avançar Status" title="Avançar Status" onClick={(e) => this.atualizarPedido(pedido)}></input>
+                            <input style={{ paddingRight: '10px' }} name="excluirPedido" type="image" id="excluirPedido" src={excluirPedido} alt="Excluir Pedido" title="Excluir Pedido" onClick={() => { excluirPedido(pedido.id) }}></input>
                         </td>
                     </tr>
                 )
@@ -108,6 +99,8 @@ class Status extends Component {
                     </tbody>
                 </table>
                 <Legenda />
+                <ModalPedido />
+
             </div >
         );
     }

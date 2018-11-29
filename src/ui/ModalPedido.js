@@ -19,10 +19,6 @@ export default class ModalPedido extends Component {
                                     <input type="text" className="form-control" id="cliente" />
                                 </div>
                                 <div className="form-group">
-                                    <label htmlFor="message-text" className="col-form-label">CPF:</label>
-                                    <input type="text" className="form-control" id="cpf" />
-                                </div>
-                                <div className="form-group">
                                     <label htmlFor="message-text" className="col-form-label">Descrição:</label>
                                     <textarea className="form-control" id="message-text"></textarea>
                                 </div>

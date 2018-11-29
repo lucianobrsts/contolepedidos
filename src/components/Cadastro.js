@@ -44,14 +44,14 @@ class Cadastro extends Component {
                     <br />
 
                     <form onSubmit={this.handleSubmit}>
-                        <div className="form-group col-md-6">
-                            <input type="text" id="nome" name="nome" placeholder="Nome do Cliente" onChange={this.handleChange} />
+                        <div className="form-group">
+                            <input type="text" className="form-control" id="nome" name="nome" placeholder="Nome do Cliente" onChange={this.handleChange} />
                         </div>
-                        <div className="form-group col-md-6">
-                            <input type="text" id="cpf" name="cpf" placeholder="CPF" onChange={this.handleChange} />
+                        <div className="form-group">
+                            <input type="text" className="form-control" id="cpf" name="cpf" placeholder="CPF" onChange={this.handleChange} />
                         </div>
-                        <div className="form-group col-md-6">
-                            <textarea id="descricao" name="descricao" rows="5" placeholder="Descrição do Pedido" onChange={this.handleChange} />
+                        <div className="form-group">
+                            <textarea id="descricao" className="form-control" name="descricao" rows="5" placeholder="Descrição do Pedido" onChange={this.handleChange} />
                         </div>
                         <button type="submit" className="btn btn-primary">Registrar Pedido</button>
                     </form>
