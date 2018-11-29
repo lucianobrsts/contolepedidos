@@ -3,8 +3,8 @@ import Status from '../img/status.png';
 
 
 const HomeCard = (props) => (
-    <div className="col- col-" style={{ paddingTop: '10px' }}>
-        <div className="card" style={{ width: '14rem', marginRight: '50px' }}>
+    <div className="col- col-" style={{ paddingTop: '5px' }}>
+        <div className="card" style={{ width: '12rem', marginRight: '30px' }}>
             <img className="card-img-top rounded mx-auto d-block" style={{ paddingTop: '10px', width: '60px' }}
                 src={Status} alt={props.alt} />
             <div className="card-body">

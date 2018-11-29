@@ -6,7 +6,7 @@ import bolaAmarela from '../img/bolaAmarela.png';
 import bolaVerde from '../img/bolaVerde.png';
 import bolaAzul from '../img/bolaAzul.png';
 
-export default class Pedido extends Component {
+class Pedido extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -16,32 +16,31 @@ export default class Pedido extends Component {
                 descricao: '',
                 cpf: '',
                 status: 'Novo',
-                dataHora: new Date(),
+                minutos: '10',
                 id: 0
             }]
         }
     }
 
-    _corStatus(pedido) {
+    corStatus(pedido) {
         let cor = ''
         if (pedido.status === 'Novo') {
-            cor = <img src={bolaVermelha} alt="Novo Pedido"/>;
+            cor = <img src={bolaVermelha} alt="Novo Pedido" />;
         } else if (pedido.status === 'Pedido sendo preparado') {
-            cor = <img src={bolaAmarela} alt="Pedido sendo preparado"/>;
+            cor = <img src={bolaAmarela} alt="Pedido sendo preparado" />;
         } else if (pedido.status === 'Pedido em conferência') {
-            cor = <img src={bolaVerde} alt="Pedido em conferência"/>;
+            cor = <img src={bolaVerde} alt="Pedido em conferência" />;
         } else if (pedido.status === 'Pronto para pagamento') {
-            cor = <img src={bolaAzul} alt="Pedido para pagamento"/>;
+            cor = <img src={bolaAzul} alt="Pedido para pagamento" />;
         }
         return cor;
     }
 
     render() {
-        
         return (
-            <div>
+            <div className="container">
                 <br />
-                <h2>Acompanhamento de Pedidos</h2>
+                <h5>Acompanhamento de Pedidos</h5>
                 <br />
 
                 <table className="table table-bordeless table-hover">
@@ -56,9 +55,9 @@ export default class Pedido extends Component {
                         {dbjson.pedidos.map((pedido, index) => {
                             return (
                                 < tr key={pedido.id}>
-                                    <th scope="row" style={{fontSize: '20px' }}>{pedido.nome}</th>
-                                    <td style={{ textAlign: 'center', fontSize: '20px' }}> <strong>{pedido.dataHora}</strong> min </td>
-                                    <td style={{ textAlign: 'center' }}>{this._corStatus(pedido)} </td>
+                                    <th scope="row">{pedido.nome}</th>
+                                    <td style={{ textAlign: 'center', fontSize: '20px' }}> <strong>{pedido.minutos}</strong> min </td>
+                                    <td style={{ textAlign: 'center' }}>{this.corStatus(pedido)} </td>
                                 </tr>
                             )
                         })}
@@ -71,3 +70,5 @@ export default class Pedido extends Component {
         );
     }
 }
+
+export default Pedido

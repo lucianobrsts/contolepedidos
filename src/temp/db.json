@@ -1,28 +1,44 @@
 {
-    "pedidos": [
-      {
-        "nome": "Luciano Brito",
-        "descricao": "parachoque dianteiro Gol",
-        "cpf": "585.924.090-20",
-        "status" : "Novo",
-        "minutos" : "2",
-        "id": 1
-      },
-      {
-        "nome": "Jackson Batista",
-        "descricao": "Lanterna parati 2010",
-        "cpf": "383.059.290-60",
-        "status" : "Novo",
-        "minutos" : "30",
-        "id": 2
-      },
-      {
-        "nome": "Sérgio Botelho",
-        "descricao": "Stop de freio Onix 2012",
-        "cpf": "540.361.640-31",
-        "status" : "Pedido sendo preparado",
-        "minutos" : "35",
-        "id": 3
-      }
-    ]
-  }
+  "pedidos": [
+    {
+      "nome": "Luciano Santos",
+      "descricao": "parachoque dianteiro Gol",
+      "cpf": "585.924.090-20",
+      "status": "Novo",
+      "minutos": 2,
+      "id": 1
+    },
+    {
+      "nome": "Jackson Barbosa",
+      "descricao": "Lanterna parati 2010",
+      "cpf": "383.059.290-60",
+      "status": "Novo",
+      "minutos": 30,
+      "id": 2
+    },
+    {
+      "nome": "Sérgio Botelho",
+      "descricao": "Stop de freio Onix 2012",
+      "cpf": "540.361.640-31",
+      "status": "Pronto para pagamento",
+      "minutos": 35,
+      "id": 3
+    },
+    {
+      "nome": "Luciana Brito",
+      "descricao": "asdfasdfasdf",
+      "cpf": "asdasdfsdf",
+      "status": "Novo",
+      "minutos": 59,
+      "id": 26
+    },
+    {
+        "nome": "teste",
+        "descricao": "etste",
+        "cpf": "teste",
+        "status": "Novo",
+        "minutos": 34,
+        "id": 27
+    }
+  ]
+}
